@@ -1,0 +1,8 @@
+*.class
+*.classpath
+*.settings
+*.project
+target/*
+infra-meta-gen/src/*
+svcl-feign-mapper/src/main/java/gen/*
+.p4ignore
