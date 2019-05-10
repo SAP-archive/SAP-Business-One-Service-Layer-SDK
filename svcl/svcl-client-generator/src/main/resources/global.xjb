@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd" jaxb:version="2.0">
+	<jaxb:bindings schemaLocation="edm.xsd">
+		<jaxb:schemaBindings>
+			<jaxb:package name="com.sap.b1.svcl.metadata.edm" />
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+	<jaxb:bindings schemaLocation="edmx.xsd">
+		<jaxb:schemaBindings>
+			<jaxb:package name="com.sap.b1.svcl.metadata.edmx" />
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+	<jaxb:bindings schemaLocation="metadata.xsd">
+		<jaxb:schemaBindings>
+			<jaxb:package name="com.sap.b1.svcl.metadata.metadata" />
+		</jaxb:schemaBindings>
+	</jaxb:bindings>
+</jaxb:bindings>

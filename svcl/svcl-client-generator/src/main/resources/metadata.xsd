@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" elementFormDefault="qualified">
+	<xs:attribute name="DataServiceVersion" type="xs:string"/>
+	<xs:attribute name="MaxDataServiceVersion" type="xs:string"/>
+	<xs:attribute name="HttpMethod" type="xs:string"/>
+	<xs:attribute name="HasStream" type="xs:boolean"/>		
+</xs:schema>

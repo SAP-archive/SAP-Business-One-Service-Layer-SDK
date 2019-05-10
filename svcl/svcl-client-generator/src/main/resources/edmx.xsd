@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:edm="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" elementFormDefault="qualified">
+
+	<xs:import namespace="http://schemas.microsoft.com/ado/2009/11/edm" schemaLocation="edm.xsd" />
+	<xs:import namespace="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" schemaLocation="metadata.xsd" />
+
+	<xs:element name="Edmx">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="DataServices" type="DataServices" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="DataServices">
+		<xs:sequence>
+			<xs:element ref="edm:Schema" />
+		</xs:sequence>
+		<xs:attribute ref="m:DataServiceVersion"/>
+		<xs:attribute ref="m:MaxDataServiceVersion"/>
+	</xs:complexType>
+	
+</xs:schema>

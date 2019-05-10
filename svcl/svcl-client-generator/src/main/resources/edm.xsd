@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.microsoft.com/ado/2009/11/edm" 
+xmlns="http://schemas.microsoft.com/ado/2009/11/edm"
+xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+ elementFormDefault="qualified">
+ 
+ 	<xs:import namespace="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" schemaLocation="metadata.xsd" />
+ 
+	<xs:element name="Schema">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="EnumType" type="EnumType" maxOccurs="unbounded" />
+				<xs:element name="ComplexType" type="ComplexType" maxOccurs="unbounded" />
+				<xs:element name="EntityType" type="EntityType" maxOccurs="unbounded" />
+				<xs:element name="EntityContainer" type="EntityContainer" />
+			</xs:sequence>
+			<xs:attribute name="Namespace" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="EnumType">
+		<xs:sequence>
+			<xs:element name="Member" type="Member" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="Name" type="xs:string" />
+	</xs:complexType>
+	<xs:complexType name="Member">
+		<xs:attribute name="Name" type="xs:string" />
+		<xs:attribute name="Value" type="xs:string" />
+	</xs:complexType>
+	<xs:complexType name="EntityType">
+		<xs:sequence>
+			<xs:element name="Key" type="Key" />
+			<xs:element name="Property" type="Property" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="Name" type="xs:string" />
+		<xs:attribute ref="m:HasStream"/>
+	</xs:complexType>
+	<xs:complexType name="Key">
+		<xs:sequence>
+			<xs:element name="PropertyRef" type="PropertyRef " maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="Name" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="PropertyRef">
+		<xs:attribute name="Name" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="ComplexType">
+		<xs:sequence>
+			<xs:element name="Property" type="Property" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="Name" type="xs:string" />
+	</xs:complexType>
+
+	<xs:complexType name="Property">
+		<xs:attribute name="Alias" type="xs:string" />
+		<xs:attribute name="Name" type="xs:string" />
+		<xs:attribute name="Type" type="xs:string" />
+		<xs:attribute name="Writable" type="xs:boolean" />
+		<xs:attribute name="Nullable" type="xs:boolean" default="true"/>
+	</xs:complexType>
+
+	<xs:complexType name="EntityContainer">
+		<xs:sequence>
+			<xs:element name="EntitySet" type="EntitySet" maxOccurs="unbounded" />
+			<xs:element name="FunctionImport" type="FunctionImport" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EntitySet">
+		<xs:attribute name="EntityType" type="xs:string" />
+		<xs:attribute name="Name" type="xs:string" />
+		<xs:attribute name="TableName" type="xs:string" />
+	</xs:complexType>
+	<xs:complexType name="FunctionImport">
+		<xs:sequence>
+			<xs:element name="Parameter" type="Parameter" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="Name" type="xs:string" />
+		<xs:attribute name="ReturnType"  type="xs:string" />
+		<xs:attribute name="IsBindable" type="xs:boolean" />
+		<xs:attribute ref="m:HttpMethod" />						
+	</xs:complexType>
+	<xs:complexType name="Parameter">
+		<xs:attribute name="Name" type="xs:string" />
+		<xs:attribute name="Type" type="xs:string" />
+	</xs:complexType>
+</xs:schema>
