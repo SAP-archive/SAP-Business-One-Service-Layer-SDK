@@ -2,17 +2,14 @@
 
 Business One Service Layer SDK make it easy to access SAP Business One Service Layer OData interface.
 
-## Introduction. Details are listed in https://github.com/SAP/SAP-Business-One-Service-Layer-SDK/tree/master/readme
-
+## Introduction. 
+Details are listed in https://github.com/SAP/SAP-Business-One-Service-Layer-SDK/tree/master/readme
 
 1. **Strong typed, detection of errors speeds development**
 
-
 1. **Content assist intelligent code recommander & completion**
 
-
 1. **Logger shows what happening in detail**
-
     
 
 ## Examples
