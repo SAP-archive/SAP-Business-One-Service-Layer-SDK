@@ -16,7 +16,7 @@
 		<springboot.version>2.1.4.RELEASE</springboot.version>
 		<spring.framework.version>5.1.6.RELEASE</spring.framework.version>
 		<querydsl.version>4.2.1</querydsl.version>
-		<jackson.version>2.9.8</jackson.version>
+		<jackson.version>2.12.1</jackson.version>
 	</properties>
 	<build>
 		<pluginManagement>
